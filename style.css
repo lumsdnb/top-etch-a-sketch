@@ -1,0 +1,21 @@
+#eas-container {
+    display: grid;
+    width: 100px;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 6px;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(100,100,100,0.0);
+    color: white;
+    border-color: black;
+    border-width: 1px;
+    border-style: inset;
+}
+.square:hover {
+    transition: transform .05s;
+    transform: scale(0.975);
+}
