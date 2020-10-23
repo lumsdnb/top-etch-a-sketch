@@ -1,3 +1,6 @@
+h1 {
+    text-align: center;
+}
 #eas-container {
     display: grid;
     width: 60%;
@@ -22,7 +25,7 @@
 .wheels {
     display: grid;
     position: relative;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     width: 100%;
     height: 10vh;
 }
@@ -36,12 +39,28 @@
     width: 70px;
     top: 20px;
 }
+
+.dropdown {
+    position: relative;
+    border-radius: 10%;
+    background-color: white;
+    border-style: groove;
+    height: 70px;
+    width: 70px;
+    top: 20px;
+    margin: 0;
+}
+
 .l {
     left: -15px;
 }
 
 .r {
     right: -15px;
+}
+.r:hover {
+    background-color: gray;
+    color: white;
 }
 
 .square {
