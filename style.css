@@ -1,14 +1,47 @@
 #eas-container {
     display: grid;
-    width: 100px;
+    width: 60%;
+    height: 60%;
     grid-template-columns: auto auto auto auto;
     grid-template-rows: auto auto auto auto;
     grid-gap: 6px;
+
+}
+.eas-frame {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: brown;
+    width: 60%;
+    height: 60%;
+    border-radius: 40px;
+}
+
+.wheels {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+}
+
+.wheel {
+    border-radius: 50%;
+    background-color: white;
+    border-style: groove;
+    height: 70px;
+    width: 70px;
+}
+.l {
+    left: 0px;
+}
+
+.r {
+    right: 0px;
 }
 
 .square {
-    width: 100px;
-    height: 100px;
+    width: 20vh;
+    height: 20vh;
     background-color: rgba(100,100,100,0.0);
     color: white;
     border-color: black;
@@ -18,4 +51,11 @@
 .square:hover {
     transition: transform .05s;
     transform: scale(0.975);
+}
+
+.square div::before {
+  content: "";
+  padding-bottom: 100%;
+  display: inline-block;
+  vertical-align: top;
 }
