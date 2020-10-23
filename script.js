@@ -2,9 +2,9 @@ const easContainerDom = document.querySelector('#eas-container');
 //temporary place to put all the divs
 let d = document.createDocumentFragment();
 for (let index = 0; index < 16; index++) {
-    let square = document.createElement('span');
+    let square = document.createElement('div');
     square.className = 'square';
-    square.innerHTML = "x";
+    square.innerHTML = "";
     d.appendChild(square);
 }
 console.log(d);
