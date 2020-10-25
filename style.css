@@ -2,53 +2,38 @@ h1 {
     text-align: center;
 }
 #eas-container {
+    justify-content: center;
     display: grid;
-    width: 60%;
-    height: 60%;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto auto;
     grid-gap: 6px;
 
 }
 .eas-frame {
     margin: 0 auto;
-    justify-content: center;
     align-items: center;
     padding: 30px;
     background-color: brown;
-    width: 60%;
+    width: 50%;
     max-width: 500px;
     height: 60%;
     border-radius: 40px;
 }
 
 .wheels {
-    display: grid;
-    position: relative;
-    grid-template-columns: auto auto auto;
+    margin-top: 20px;
+    display: flex;
     width: 100%;
     height: 10vh;
+    justify-content: space-between;
 }
 
 .wheel {
-    position: absolute;
     border-radius: 50%;
     background-color: white;
     border-style: groove;
     height: 70px;
     width: 70px;
     top: 20px;
-}
-
-.dropdown {
-    position: relative;
-    border-radius: 10%;
-    background-color: white;
-    border-style: groove;
-    height: 70px;
-    width: 70px;
-    top: 20px;
-    margin: 0;
+    align-items: center;
 }
 
 .l {
@@ -58,18 +43,18 @@ h1 {
 .r {
     right: -15px;
 }
-.r:hover {
+.wheel:hover {
     background-color: gray;
     color: white;
 }
 
 .square {
-    width: 10vh;
-    height: 10vh;
+    width: 30px;
+    height: 30px;
     background-color: rgba(100,100,100,0.0);
     color: white;
     border-color: black;
-    border-width: 1px;
+    border-width: 6px;
     border-style: inset;
 }
 .square:hover {
