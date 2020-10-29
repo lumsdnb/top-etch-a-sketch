@@ -1,11 +1,11 @@
 
-function makeSquares(num=32) {
+function makeSquares(num) {
     const containerDom = document.querySelector('#square-container');
     //clear square grid
     containerDom.textContent = '';
     //temporary place to put all the divs
     let d = document.createDocumentFragment();
-    for (let index = 0; index < num; index++) {
+    for (let index = 0; index < num*num; index++) {
         let square = document.createElement('div');
         square.className = 'square';
         square.style.backgroundColor = 'white';
@@ -14,6 +14,8 @@ function makeSquares(num=32) {
     }
     containerDom.style.gridTemplateColumns = `repeat(${num}, minmax(0px, 1fr))`;
     containerDom.appendChild(d);
+    containerDom.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
+    containerDom.style.gridTemplateRows = `repeat(${num}, 1fr)`;
 }
 
 function addPixelListeners(squares) {
@@ -50,7 +52,7 @@ function promptValidation(prompt) {
 
 
 
-makeSquares(16);
+makeSquares(5);
 
 let squares = document.querySelectorAll('.square');
 
@@ -66,7 +68,7 @@ resetButton.addEventListener('click', () => {
 
 
 sizeButton.addEventListener('click', () => {
-    const amount = promptValidation(prompt("how many squares?"));
+    const amount = promptValidation(prompt("how many rows/columns?"));
     console.log(amount);
     if (amount) {
         makeSquares(amount);
