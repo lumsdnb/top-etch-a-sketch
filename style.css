@@ -1,73 +1,85 @@
 h1 {
-    text-align: center;
+  text-align: center;
 }
 #square-container {
-    display: grid;
-    height: 20em;
-    width: 20em;
+  display: grid;
+  height: 20em;
+  width: 20em;
+  margin: auto;
+}
+
+@media screen and (max-width: 410px) {
+  #square-container {
+    height: 70vw;
+    width: 70vw;
     margin: auto;
+  }
 }
 .outer-frame {
-    margin: 0 auto;
-    align-items: center;
-    padding: 30px;
-    background-color: brown;
-    width: 50%;
-    max-width: 500px;
-    height: 60%;
-    border-radius: 40px;
-    -webkit-box-shadow: 5px 5px 0px 0px #6e6e6e, 10px 10px 0px 0px #adadad, 15px 15px 0px 0px #c9cbcc, 20px 20px 0px 0px #d8d8d8, 25px 25px 0px 0px #eeeeee, 5px 5px 15px 5px rgba(0,0,0,0); 
-box-shadow: 5px 5px 0px 0px #6e6e6e, 10px 10px 0px 0px #adadad, 15px 15px 0px 0px #c9cbcc, 20px 20px 0px 0px #d8d8d8, 25px 25px 0px 0px #eeeeee, 5px 5px 15px 5px rgba(0,0,0,0); 
+  margin: 0 auto;
+  padding: 30px;
+  background-color: brown;
+  width: 80vw;
+  height: 60vh;
+  max-width: 330px;
+  max-height: 500px;
+  border-radius: 40px;
+  -webkit-box-shadow: 5px 5px 0px 0px #6e6e6e, 10px 10px 0px 0px #adadad,
+    15px 15px 0px 0px #c9cbcc, 20px 20px 0px 0px #d8d8d8,
+    25px 25px 0px 0px #eeeeee, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 5px 5px 0px 0px #6e6e6e, 10px 10px 0px 0px #adadad,
+    15px 15px 0px 0px #c9cbcc, 20px 20px 0px 0px #d8d8d8,
+    25px 25px 0px 0px #eeeeee, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
 .square {
-    background-color: rgba(100,100,100,0.0);
-    color: white;
-    border-style: none;
-    font-weight: bold;
-    font-size: 1.5em;
-    text-align: center;
-    flex: 1 1 0px
+  background-color: rgba(100, 100, 100, 0);
+  color: white;
+  border-style: none;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  flex: 1 1 0px;
 }
 
 .wheels {
-    margin-top: 20px;
-    display: flex;
-    width: 100%;
-    height: 10vh;
-    justify-content: space-between;
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  justify-content: space-between;
 }
 
 .square:hover {
-    transition: transform .05s;
-    transform: scale(0.975);
+  transition: transform 0.05s;
+  transform: scale(0.975);
 }
 
 .square div::before {
-  content: "";
+  content: '';
   padding-bottom: 100%;
   display: inline-block;
   vertical-align: top;
 }
 
 .wheel {
-    border-radius: 50%;
-    background-color: white;
-    border-style: groove;
-    height: 70px;
-    width: 70px;
-    top: 20px;
-    align-items: center;
+  border-radius: 50%;
+  background-color: white;
+  border-style: groove;
+  height: 70px;
+  width: 70px;
+  top: 20px;
+  align-items: center;
 }
 
 .l {
-    left: -15px;
+  left: -15px;
 }
 
 .r {
-    right: -15px;
+  right: -15px;
 }
 .wheel:hover {
-    background-color: gray;
-    color: white;
+  background-color: gray;
+  color: white;
 }
